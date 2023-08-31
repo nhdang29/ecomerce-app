@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_banhang/login_signin/login_screen.dart';
+import 'package:flutter_app_banhang/providers/page_index_provider.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:provider/provider.dart';
 
 
 
@@ -24,15 +26,9 @@ class DrawerWidget extends StatelessWidget {
                 //   context,
                 //   MaterialPageRoute(builder: (context) => MyHomePage()),
                 // )
-              onTap: (){}
-            ),
-            _createDrawerItem(
-                icon: FontAwesomeIcons.user,
-                text: 'Sign In',
-                onTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const LoginPage()),
-                )
+              onTap: (){
+                  context.read<PageIndexProvider>().navigateToIndex(0);
+              }
             ),
             _createDrawerItem(
                 icon: Icons.favorite_border,
@@ -41,7 +37,21 @@ class DrawerWidget extends StatelessWidget {
                 //   context,
                 //   MaterialPageRoute(builder: (context) => const WishListScreen()),
                 // )
-              onTap: (){}
+              onTap: (){
+                context.read<PageIndexProvider>().navigateToIndex(1);
+              }
+            ),
+            _createDrawerItem(
+                icon: Icons.person,
+                text: 'Acount',
+                // onTap: () => Navigator.push(
+                //   context,
+                //   MaterialPageRoute(
+                //       builder: (context) => EmptyWishListScreen()),
+                // )
+                onTap: (){
+                  context.read<PageIndexProvider>().navigateToIndex(3);
+                }
             ),
             _createDrawerItem(
                 icon: Icons.call,
@@ -51,7 +61,15 @@ class DrawerWidget extends StatelessWidget {
                 //   MaterialPageRoute(
                 //       builder: (context) => EmptyWishListScreen()),
                 // )
-              onTap: (){}
+                onTap: (){}
+            ),
+            _createDrawerItem(
+                icon: FontAwesomeIcons.user,
+                text: 'Sign In',
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const LoginPage()),
+                )
             ),
           ],
         ),

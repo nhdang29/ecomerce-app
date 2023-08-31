@@ -28,8 +28,8 @@ class BottomNavBarWidget extends StatelessWidget {
           label: 'Cart'
         ),
         BottomNavigationBarItem(
-          icon: Icon(FontAwesomeIcons.dashcube),
-          label: "Dashboard"
+          icon: Icon(Icons.person),
+          label: "Account"
         ),
       ],
       currentIndex: context.watch<PageIndexProvider>().index,
