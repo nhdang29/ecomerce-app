@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class SignInPage extends StatelessWidget {
-  const SignInPage({super.key});
+class SignUpPage extends StatelessWidget {
+  const SignUpPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -9,18 +9,18 @@ class SignInPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Sign in Page"),
       ),
-      body: const SignInBody(),
+      body: const SignUpBody(),
     );
   }
 }
 
-class SignInBody extends StatelessWidget {
-  const SignInBody({super.key});
+class SignUpBody extends StatelessWidget {
+  const SignUpBody({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const Center(
-      child: Text("Sign in"),
+      child: Text("Sign up"),
     );
   }
 }

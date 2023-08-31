@@ -47,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
     const HomeScreen(),
     const WishListScreen(),
     const ShoppingCartScreen(),
-    const HomeScreen()
+    const AccountScreen()
   ];
 
 
